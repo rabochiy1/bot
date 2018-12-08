@@ -28,3 +28,5 @@ while True:
   print(str(user_name[0]['first_name']) + ' ' +
   str(user_name[0]['last_name']) + ' написал(а) боту - ' + str(update[0][6]))
  ts = long_poll['ts']
+vvvvvvvv
+
