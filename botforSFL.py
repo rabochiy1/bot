@@ -31,11 +31,11 @@ while True:
   user_id = update[0][3]
   user_name = vk_bot.method('users.get', {'user_ids': user_id})
   print(str(user_name[0]['first_name']) + ' ' + str(user_name[0]['last_name']) + ' написал(а) боту - ' + str(update[0][6]))
-  if '650' in update[0][6]:
+  if update[0][6]=='650':
      write_msg_attach(user_id,
                       'Затычка',
                       'photo261166398_456239824')
-  if '660ti' in update[0][6]:
+  elif update[0][6]=='660ti':
      write_msg_attach(user_id,
                       'Лучше 750ти на 2-3 фпс, особенно в 1920х1080',
                       'photo261166398_456239827')
@@ -43,11 +43,11 @@ while True:
      write_msg_attach(user_id,
                       'слушай',
                       'audio261166398_456239173')
-  if '660' in update[0][6]:
+  if update[0][6]=='660':
       write_msg_attach(user_id,
                        'Как 750ти, но шина шире',
                        'photo261166398_456239833')
-  if '650ti' in update[0][6]:
+  elif update[0][6]=='650ti':
       write_msg_attach(user_id,
                            'Затычка, если повезет найдешь версию на 2 гига',
                            'photo261166398_456239826')
@@ -63,7 +63,7 @@ while True:
       write_msg_attach(user_id,
                        'Первая карта на архитектуре Maxwell. Затычка, которая +- как GPU PS4',
                        'photo261166398_456239835')
-  if '760' in update[0][6]:
+  if update[0][6]=='760':
       write_msg_attach(user_id,
                        'Неплохая видеокарта для 1600х900, есть версия на 1.5, 2, 3, 4 гига, отличаются шиной. Слабее 670 на 7-10%',
                        'photo261166398_456239836')
@@ -71,11 +71,11 @@ while True:
       write_msg_attach(user_id,
                        'Топ за свои деньги, почти как 1050ти, но жрёт 220вт. Есть версии на 2 и 4 гига',
                        'photo261166398_456239838')
-  if '760ti' in update[0][6]:
+  elif update[0][6]=='760ti':
       write_msg_attach(user_id,
                        'Редкий экземпляр, в России почти нет.',
                        'photo261166398_456239837')
-  if '780' in update[0][6]:
+  if update[0][6]=='780':
       write_msg_attach(user_id,
                        'Прекрасная видеокарта, но жрет 250вт',
                        'photo261166398_456239839')
@@ -83,7 +83,7 @@ while True:
       write_msg_attach(user_id,
                        'Как 1050, но ценится майнерами. Полный аналог HD 7850, но имеет версию на 4 гига',
                        'photo261166398_456239841')
-  if '780ti' in update[0][6]:
+  elif update[0][6]=='780ti':
       write_msg_attach(user_id,
                        'Тоже ест 250вт, зато как 1060 на 3 гига',
                        'photo261166398_456239840')
