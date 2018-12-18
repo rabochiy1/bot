@@ -79,7 +79,7 @@ while True:
       write_msg_attach(user_id,
                        'Прекрасная видеокарта, но жрет 250вт',
                        'photo261166398_456239839')
-  if 'r9 270' in update[0][6]:
+  if 'R9 270' in update[0][6]:
       write_msg_attach(user_id,
                        'Как 1050, но ценится майнерами. Полный аналог HD 7850 и R9 370, но имеет версию на 4 гига',
                        'photo261166398_456239841')
@@ -87,27 +87,45 @@ while True:
       write_msg_attach(user_id,
                        'Тоже ест 250вт, зато как 1060 на 3 гига',
                        'photo261166398_456239840')
-  if 'r9_270x' in update[0][6]:
+  if 'R9_270x' in update[0][6]:
       write_msg_attach(user_id,
                        'Аналог 7870 и R9 370x, чуть лучше 1050. Ценится майнерами',
                        'photo261166398_456239842')
-  if (user_name[0]['last_name'])=='Поргов':
-      write_msg(user_id, 'Порг кака')
-  if 'r9 280' in update[0][6]:
+  if (user_name[0]['last_name'])=='Poppy':
+      write_msg(user_id, 'Залупа')
+  if 'R9 280' in update[0][6]:
       write_msg_attach(user_id,
                        'Аналог HD 7950 и R9 380, но у 380 версии на 2 и 4 гига. Ценится майнерами',
                        'photo261166398_456239843')
-  if 'r9_280x' in update[0][6]:
+  if 'R9_280x' in update[0][6]:
       write_msg_attach(user_id,
                        'Аналог HD 7970 и R9 380x, 380x отличается памятью',
                        'photo261166398_456239844')
-  if 'r9 290' in update[0][6]:
+  if 'R9 290' in update[0][6]:
       write_msg_attach(user_id,
                        'Первая карта от AMD, которая тянула 4к и тянет. Ест около 300вт, аналог R9 390',
                        'photo261166398_456239845')
+  if 'RX 560' in update[0][6]:
+      write_msg_attach(user_id,
+                       'Перевыпуск RX 560 с небольшим разгоном и разблокированными шейдерами(можно было анлокнуть самому)',
+                       'photo261166398_456239847')
+  if 'RX_560d' in update[0][6]:
+      write_msg_attach(user_id,
+                       'Полный аналог RX 460, есть версии на 2 и 4 гига',
+                       'photo261166398_456239848')
+  if 'RX 570' in update[0][6]:
+      write_msg_attach(user_id,
+                       'Не шибко популярный аналог RX 470. Имеет версии на 4 и 8 гигов',
+                       'photo261166398_456239849')
+  if '1' in update[0][6]:
+      write_msg(user_id,
+            'GTX на архитектуре Kepler: 650, 650ti, 660, 660ti, 670, 680, 750ti, 760, 760ti, 770, 780, 780ti ')
+  if '2' in update[0][6]:
+      write_msg(user_id,
+                'Карты на архитектуре GCN: R9 270, R9_270x, R9 280, R9_280x, R9 290, R9_290x, RX 560, RX_560d, RX 570' )
   else:
      write_msg(user_id,
-     'доступные видеокарты: 650, 650ti, 660, 660ti, 670, 680, 750ti, 760, 760ti, 770, 780, 780ti, r9 270, r9_270x, r9 280, r9_280x, r9 290, музыка')
+     'Команды: 1, 2, музыка')
  ts = long_poll['ts']
 
 
