@@ -31,6 +31,7 @@ while True:
   user_id = update[0][3]
   user_name = vk_bot.method('users.get', {'user_ids': user_id})
   print(str(user_name[0]['first_name']) + ' ' + str(user_name[0]['last_name']) + ' написал(а) боту - ' + str(update[0][6]))
+
   if update[0][6]=='650':
      write_msg_attach(user_id,
                       'Затычка',
@@ -123,6 +124,7 @@ while True:
   if '2' in update[0][6]:
       write_msg(user_id,
                 'Карты на архитектуре GCN: R9 270, R9_270x, R9 280, R9_280x, R9 290, R9_290x, RX 560, RX_560d, RX 570' )
+
   else:
      write_msg(user_id,
      'Команды: 1, 2, музыка')
