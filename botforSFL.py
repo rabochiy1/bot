@@ -139,13 +139,13 @@ while True:
       write_msg_attach(user_id,
                        'Карта с заводским косяком, из-за которого доступно 3.5 гига вместо 4. Производительность как 1063',
                        'photo261166398_456239859')
-  if '1' in update[0][6]:
+  if update[0][6]=='1':
       write_msg(user_id,
             'GTX на архитектуре Kepler: 650, 650ti, 660, 660ti, 670, 680, 760, 760ti, 770, 780, 780ti ')
-  if '2' in update[0][6]:
+  if update[0][6]=='2':
       write_msg(user_id,
                 'Карты на архитектуре GCN: R9 270, R9_270x, R9 280, R9_280x, R9 290, R9_290x, RX 550, RX 560, RX_560d, RX 570, RX 580, Vega 56, Vega 64')
-  if '3' in update[0][6]:
+  if update[0][6]=='3':
       write_msg(user_id,
                 'Карты на архитектуре Максвелл: 750ti, 950, 960, 970')
 
