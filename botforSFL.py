@@ -151,7 +151,7 @@ while True:
 
   else:
      write_msg(user_id,
-     'Команды: 1, 2, 3')
+     'Команды: 1, 2, 3; затем пиши названия карт')
  ts = long_poll['ts']
 
 
