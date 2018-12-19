@@ -87,8 +87,6 @@ while True:
       write_msg_attach(user_id,
                        'Аналог 7870 и R9 370x, чуть лучше 1050. Ценится майнерами',
                        'photo261166398_456239842')
-  if (user_name[0]['last_name'])=='Poppy':
-      write_msg(user_id, 'Залупа')
   if 'R9 280' in update[0][6]:
       write_msg_attach(user_id,
                        'Аналог HD 7950 и R9 380, но у 380 версии на 2 и 4 гига. Ценится майнерами',
