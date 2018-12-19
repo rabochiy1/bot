@@ -31,7 +31,6 @@ while True:
   user_id = update[0][3]
   user_name = vk_bot.method('users.get', {'user_ids': user_id})
   print(str(user_name[0]['first_name']) + ' ' + str(user_name[0]['last_name']) + ' написал(а) боту - ' + str(update[0][6]))
-
   if update[0][6]=='650':
      write_msg_attach(user_id,
                       'Затычка',
@@ -40,10 +39,6 @@ while True:
      write_msg_attach(user_id,
                       'Лучше 750ти на 2-3 фпс, особенно в 1920х1080',
                       'photo261166398_456239827')
-  if 'муз' in update[0][6]:
-     write_msg_attach(user_id,
-                      'слушай',
-                      'audio261166398_456239173')
   if update[0][6]=='660':
       write_msg_attach(user_id,
                        'Как 750ти, но шина шире',
@@ -106,6 +101,10 @@ while True:
       write_msg_attach(user_id,
                        'Первая карта от AMD, которая тянула 4к и тянет. Ест около 300вт, аналог R9 390',
                        'photo261166398_456239845')
+  if 'RX 550' in update[0][6]:
+      write_msg_attach(user_id,
+                       'Самая бесполезная карта. Имеет версии с 512 и 640 шейдерами, плюс 2 или 4 гига'
+                       'photo261166398_456239851')
   if 'RX 560' in update[0][6]:
       write_msg_attach(user_id,
                        'Перевыпуск RX 560 с небольшим разгоном и разблокированными шейдерами(можно было анлокнуть самому)',
@@ -116,18 +115,22 @@ while True:
                        'photo261166398_456239848')
   if 'RX 570' in update[0][6]:
       write_msg_attach(user_id,
-                       'Не шибко популярный аналог RX 470. Имеет версии на 4 и 8 гигов',
+                       'Не очень популярный аналог RX 470. Есть версии на 4 и 8 гигов',
+                       'photo261166398_456239850')
+  if 'RX 580' in update[0][6]:
+      write_msg_attach(user_id,
+                       'Популярный аналог RX 480. Имеет версии на 4 и 8 гигов',
                        'photo261166398_456239849')
   if '1' in update[0][6]:
       write_msg(user_id,
             'GTX на архитектуре Kepler: 650, 650ti, 660, 660ti, 670, 680, 750ti, 760, 760ti, 770, 780, 780ti ')
   if '2' in update[0][6]:
       write_msg(user_id,
-                'Карты на архитектуре GCN: R9 270, R9_270x, R9 280, R9_280x, R9 290, R9_290x, RX 560, RX_560d, RX 570' )
+                'Карты на архитектуре GCN: R9 270, R9_270x, R9 280, R9_280x, R9 290, R9_290x, RX 550, RX 560, RX_560d, RX 570, RX 580' )
 
   else:
      write_msg(user_id,
-     'Команды: 1, 2, музыка')
+     'Команды: 1, 2')
  ts = long_poll['ts']
 
 
