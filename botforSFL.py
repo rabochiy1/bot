@@ -28,7 +28,7 @@ while True:
                                                                                         ts=ts)).json()
 
   update = long_poll['updates']
-  if update[0][0] == 4:
+  if update[0][0]==4:
   #print(update)
    user_id = update[0][3]
    user_name = vk_bot.method('users.get', {'user_ids': user_id})
@@ -159,6 +159,28 @@ while True:
    if update[0][6]=='1050ti':
        write_msg_attach('Лучше, чем 960 и Rx 560, но еще затычка',
                         'photo261166398_456239871')
+   if update[0][6] == '1063':
+      write_msg_attach('Топ для 1920x1080',
+                       'photo261166398_456239872')
+   if update[0][6] == '1066':
+      write_msg_attach('Топ для 1920x1080, да и в 2560х1440 может. Имееет больше шейдерных блоков и TMU, нежели версия на 3 гига',
+                       'photo261166398_456239873')
+   if update[0][6]=='1070':
+       write_msg_attach(user_id,
+                        'Карта с запасом для 1920x1080 и оптимальная для QuadHD',
+                        'photo261166398_456239874')
+   if update[0][6] == '1070ti':
+      write_msg_attach(user_id,
+                       'Карта для QuadHD',
+                       'photo261166398_456239875')
+   if update[0][6]=='1080':
+       write_msg_attach(user_id,
+                        'Билет в 4к 60fps',
+                        'photo261166398_456239876')
+   if update[0][6]=='1080ti':
+       write_msg_attach(user_id,
+                        'Карта с запасом даже для 4к, но и жрет 250вт',
+                        'photo261166398_456239877')
    if update[0][6]=='1':
       write_msg(user_id,
             'GTX на архитектуре Kepler: 650, 650ti, 660, 660ti, 670, 680, 760, 760ti, 770, 780, 780ti ')
@@ -170,7 +192,7 @@ while True:
                 'Карты на архитектуре Максвелл: 750ti, 950, 960, 970, 980, 980ti')
    if update[0][6]=='4':
         write_msg(user_id,
-                  'Карты на архитектуре Паскаль: 1030, 1050, 1050ti')
+                  'Карты на архитектуре Паскаль: 1030, 1050, 1050ti, 1063, 1066, 1070, 1070ti')
    else:
      write_msg(user_id,
      'Команды: 1, 2, 3; затем пиши названия карт')
