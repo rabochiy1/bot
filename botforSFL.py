@@ -173,7 +173,7 @@ while True:
        write_msg_attach(user_id,
                         'Карта с запасом для 1920x1080 и оптимальная для QuadHD',
                         'photo261166398_456239874')
-   if update[0][6] == '1070ti':
+   if update[0][6]=='1070ti':
       write_msg_attach(user_id,
                        'Карта для QuadHD',
                        'photo261166398_456239875')
