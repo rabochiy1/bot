@@ -195,7 +195,7 @@ while True:
                   'Карты на архитектуре Паскаль: 1030, 1050, 1050ti, 1063, 1066, 1070, 1070ti, 1080, 1080ti')
    else:
      write_msg(user_id,
-     'Команды: 1, 2, 3; затем пиши названия карт')
+     'Команды: 1, 2, 3, 4; затем пиши названия карт')
   ts = long_poll['ts']
  except KeyError:
   vk_bot.method('messages.getLongPollServer', {'need_pts': 1, 'lp_version': 3})
