@@ -215,6 +215,14 @@ while True:
        write_msg_attach(user_id,
                         '6 ядер и 12 потоков для народа. Стоковая частота-3.2ггц',
                         'photo261166398_456239885')
+   if update[0][6]=='R5 1600x':
+       write_msg_attach(user_id,
+                        'Чуть подразогнанней и дешевле(на КУ). В стоке 3.6ггц',
+                        'photo261166398_456239888')
+   if update[0][6]=='R5 2600':
+       write_msg_attach(user_id,
+                        'Тот же 1600, но уже 2-ое поколение, да и стоит дороже',
+                        '')
    if update[0][6]=='1':
       write_msg(user_id,
             'GTX на архитектуре Kepler: 650, 650ti, 660, 660ti, 670, 680, 760, 760ti, 770, 780, 780ti ')
@@ -232,9 +240,13 @@ while True:
                       'Сокет АМ4: 200GE, R3 1200, R3 1300x, R3 2200G, R5 1400, R5 2400G, R5 1500x, R5 1600')
    else:
        write_msg(user_id,
-        'Видеокарты: 1, 2, 3, 4; затем пиши названия карт, процы: 5; затем пиши названия процов(я не знаю, как сделать так, чтобы он отвечал всем сразу)')
+        'Видеокарты: 1, 2, 3, 4; процы: 5 (я не знаю, как сделать так, чтобы он отвечал всем сразу)')
   ts = long_poll['ts']
  except KeyError:
   vk_bot.method('messages.getLongPollServer', {'need_pts': 1, 'lp_version': 3})
+  long_poll = requests.get('https://{server}?act={act}&key={key}&ts={ts}&wait=100100000000'.format(server=server,
+                                                                                                   act='a_check',
+                                                                                                   key=key,
+                                                                                                   ts=ts)).json()
 
 
